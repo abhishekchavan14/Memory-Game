@@ -15,22 +15,22 @@ const cardArray = [
         name:'cat4',
         img: 'media/cat4.jpg'
     },
-    {
-        name:'cat5',
-        img: 'media/cat5.jpg'
-    },
-    {
-        name:'cat6',
-        img: 'media/cat6.jpg'
-    },
-    {
-        name:'cat7',
-        img: 'media/cat7.jpg'
-    },
-    {
-        name:'cat8',
-        img: 'media/cat8.jpg'
-    },
+    // {
+    //     name:'cat5',
+    //     img: 'media/cat5.jpg'
+    // },
+    // {
+    //     name:'cat6',
+    //     img: 'media/cat6.jpg'
+    // },
+    // {
+    //     name:'cat7',
+    //     img: 'media/cat7.jpg'
+    // },
+    // {
+    //     name:'cat8',
+    //     img: 'media/cat8.jpg'
+    // },
     {
         name:'cat1',
         img: 'media/cat1.jpg'
@@ -46,23 +46,24 @@ const cardArray = [
     {
         name:'cat4',
         img: 'media/cat4.jpg'
-    },
-    {
-        name:'cat5',
-        img: 'media/cat5.jpg'
-    },
-    {
-        name:'cat6',
-        img: 'media/cat6.jpg'
-    },
-    {
-        name:'cat7',
-        img: 'media/cat7.jpg'
-    },
-    {
-        name:'cat8',
-        img: 'media/cat8.jpg'
     }
+    // ,
+    // {
+    //     name:'cat5',
+    //     img: 'media/cat5.jpg'
+    // },
+    // {
+    //     name:'cat6',
+    //     img: 'media/cat6.jpg'
+    // },
+    // {
+    //     name:'cat7',
+    //     img: 'media/cat7.jpg'
+    // },
+    // {
+    //     name:'cat8',
+    //     img: 'media/cat8.jpg'
+    // }
 ]
 
 cardArray.sort(()=> 0.5 - Math.random()) //to shuffle the cards
