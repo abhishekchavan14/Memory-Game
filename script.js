@@ -93,7 +93,7 @@ function checkMatch(){
         cards[cardsChosenIds[0]].removeEventListener('click', flipCard);
         cards[cardsChosenIds[1]].removeEventListener('click', flipCard);
         cardsWon.push(cardsChosen);
-        correct_audio.play();
+        // correct_audio.play();
         document.getElementById('result_display').innerHTML = "Found a Pair!";
         document.getElementById('result_display').style.color = "yellowgreen";
         document.getElementById('moves_count_display').innerHTML = "Pairs to be found: " + (cardArray.length/2 - cardsWon.length);
@@ -101,14 +101,14 @@ function checkMatch(){
     else{
         cards[cardsChosenIds[0]].setAttribute('src', 'media/blank_bg.jpg');
         cards[cardsChosenIds[1]].setAttribute('src', 'media/blank_bg.jpg');
-        incorrect_audio.play();
+        // incorrect_audio.play();
         document.getElementById('result_display').innerHTML = "Uh Oh! Try Again.";
         document.getElementById('result_display').style.color = "red";
     }
     cardsChosen = [];
     cardsChosenIds = [];
     if(cardsWon.length == cardArray.length/2){
-        win_audio.play();
+        // win_audio.play();
         document.getElementById('win_declare_display').innerHTML = "Found'em All!!";
     }
 }
