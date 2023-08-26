@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:rgb(109, 84, 61);
+}
+#main_container{
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+}
+#grid{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    /* border: solid red; */
+    justify-content: center;
+    align-items: center;
+}
+#grid img{
+    width: 21%;
+    height: 25%;
+    border-radius: 30%;
+    opacity: 80%;
+  }
+#display_container{
+    /* border: solid yellow; */
+    width: 30%;
+    margin-left: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: wheat;
+}
+.inner_displays{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 200%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#win_declare_display{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 300%;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#about_tag{
+    width: 100px;
+    /* border: solid red; */
+    margin-top: 20%;
+    box-shadow: 5px 5px 10px black;
+    opacity: 60%;
+    transition: 1s;
+}
+#about_tag:hover{
+    opacity: 100%;
+}
+@media (min-width:220px) and (max-width:480px) {
+    #grid{
+        width: 97%;
+    }
+    #main_container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #display_container{
+        width: 97%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: xx-small;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+    #about_tag{
+        width: 70px;
+        margin-top: 30%;
+    }
+}
+@media (min-width:481px) and (max-width:768px){
+    #grid{
+        width: 97%;
+    }
+    #main_container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #display_container{
+        width: 97%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: x-small;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+    #about_tag{
+        width: 80px;
+        margin-top: 30%;
+    }
+}
+@media (min-width:769px) and (max-width:1024px){
+    #display_container{
+        text-align: center;
+    }
+}
