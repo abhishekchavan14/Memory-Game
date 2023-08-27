@@ -1,79 +1,228 @@
+// const cardArray = [
+//     {
+//         name:'cat1',
+//         img: 'media/cat1.jpg'
+//     },
+//     {
+//         name:'cat2',
+//         img: 'media/cat2.jpg'
+//     },
+//     {
+//         name:'cat3',
+//         img: 'media/cat3.jpg'
+//     },
+//     {
+//         name:'cat4',
+//         img: 'media/cat4.jpg'
+//     },
+//     {
+//         name:'cat5',
+//         img: 'media/cat5.jpg'
+//     },
+//     {
+//         name:'cat6',
+//         img: 'media/cat6.jpg'
+//     },
+//     {
+//         name:'cat7',
+//         img: 'media/cat7.jpg'
+//     },
+//     {
+//         name:'cat8',
+//         img: 'media/cat8.jpg'
+//     },
+//     {
+//         name:'cat1',
+//         img: 'media/cat1.jpg'
+//     },
+//     {
+//         name:'cat2',
+//         img: 'media/cat2.jpg'
+//     },
+//     {
+//         name:'cat3',
+//         img: 'media/cat3.jpg'
+//     },
+//     {
+//         name:'cat4',
+//         img: 'media/cat4.jpg'
+//     },
+//     {
+//         name:'cat5',
+//         img: 'media/cat5.jpg'
+//     },
+//     {
+//         name:'cat6',
+//         img: 'media/cat6.jpg'
+//     },
+//     {
+//         name:'cat7',
+//         img: 'media/cat7.jpg'
+//     },
+//     {
+//         name:'cat8',
+//         img: 'media/cat8.jpg'
+//     }
+// ]
+
+// cardArray.sort(()=> 0.5 - Math.random()) //to shuffle the cards
+
+// const gridDisplay = document.querySelector('#grid');
+// let cardsChosen = [];
+// let cardsChosenIds = [];
+// const cardsWon = [];
+
+// function createBoard(){
+//     for(let i =0; i<cardArray.length; i++){
+//         const card = document.createElement('img');
+//         card.setAttribute('src', 'media/blank_bg.jpg');
+//         card.setAttribute('data-id', i);
+//         card.addEventListener('click', flipCard);
+//         gridDisplay.appendChild(card);
+//     }
+// }
+// createBoard();
+// function checkMatch(){
+//     const cards = document.querySelectorAll('#grid img');
+//     if (cardsChosenIds[0]==cardsChosenIds[1]){
+//         alert("Do not click the same card again.\nReloading the page.");
+//         location.reload();
+//     }
+//     if(cardsChosen[0]==cardsChosen[1]){
+//         console.log("found");
+//         cards[cardsChosenIds[0]].removeEventListener('click', flipCard);
+//         cards[cardsChosenIds[1]].removeEventListener('click', flipCard);
+//         cardsWon.push(cardsChosen);
+//         // correct_audio.play();
+//         document.getElementById('result_display').innerHTML = "Found a Pair!";
+//         document.getElementById('result_display').style.color = "yellowgreen";
+//         document.getElementById('moves_count_display').innerHTML = "Pairs to be found: " + (cardArray.length/2 - cardsWon.length);
+//     }
+//     else{
+//         cards[cardsChosenIds[0]].setAttribute('src', 'media/blank_bg.jpg');
+//         cards[cardsChosenIds[1]].setAttribute('src', 'media/blank_bg.jpg');
+//         // incorrect_audio.play();
+//         document.getElementById('result_display').innerHTML = "Uh Oh! Try Again.";
+//         document.getElementById('result_display').style.color = "red";
+//     }
+//     cardsChosen = [];
+//     cardsChosenIds = [];
+//     if(cardsWon.length == cardArray.length/2){
+//         // win_audio.play();
+//         document.getElementById('win_declare_display').innerHTML = "Found'em All!!";
+//     }
+// }
+// let counter = 0;
+// function flipCard(){
+//     let cardId = this.getAttribute('data-id');
+//     cardsChosen.push(cardArray[cardId].name);
+//     cardsChosenIds.push(cardId);
+//     console.log(cardsChosen);
+//     this.setAttribute('src', cardArray[cardId].img);
+//     if(cardsChosen.length === 2){
+//         setTimeout(checkMatch, 100);
+//     }
+//     counter++;
+//     document.getElementById('moves_count_display').innerHTML = "Total Moves Made: " + Math.floor(counter/2);
+// }
+
+
+
+///
+
 const cardArray = [
     {
-        name:'cat1',
+        name: 'cat1',
         img: 'media/cat1.jpg'
     },
     {
-        name:'cat2',
+        name: 'cat2',
         img: 'media/cat2.jpg'
     },
     {
-        name:'cat3',
+        name: 'cat3',
         img: 'media/cat3.jpg'
     },
     {
-        name:'cat4',
+        name: 'cat4',
         img: 'media/cat4.jpg'
     },
     {
-        name:'cat5',
+        name: 'cat5',
         img: 'media/cat5.jpg'
     },
     {
-        name:'cat6',
+        name: 'cat6',
         img: 'media/cat6.jpg'
     },
     {
-        name:'cat7',
+        name: 'cat7',
         img: 'media/cat7.jpg'
     },
     {
-        name:'cat8',
+        name: 'cat8',
         img: 'media/cat8.jpg'
     },
     {
-        name:'cat1',
+        name: 'cat1',
         img: 'media/cat1.jpg'
     },
     {
-        name:'cat2',
+        name: 'cat2',
         img: 'media/cat2.jpg'
     },
     {
-        name:'cat3',
+        name: 'cat3',
         img: 'media/cat3.jpg'
     },
     {
-        name:'cat4',
+        name: 'cat4',
         img: 'media/cat4.jpg'
     },
     {
-        name:'cat5',
+        name: 'cat5',
         img: 'media/cat5.jpg'
     },
     {
-        name:'cat6',
+        name: 'cat6',
         img: 'media/cat6.jpg'
     },
     {
-        name:'cat7',
+        name: 'cat7',
         img: 'media/cat7.jpg'
     },
     {
-        name:'cat8',
+        name: 'cat8',
         img: 'media/cat8.jpg'
     }
-]
+];
 
-cardArray.sort(()=> 0.5 - Math.random()) //to shuffle the cards
+cardArray.sort(() => 0.5 - Math.random());
 
 const gridDisplay = document.querySelector('#grid');
 let cardsChosen = [];
 let cardsChosenIds = [];
 const cardsWon = [];
 
-function createBoard(){
-    for(let i =0; i<cardArray.length; i++){
+// Preload images
+const preloadImages = () => {
+    for (const card of cardArray) {
+        const img = new Image();
+        img.src = card.img;
+    }
+};
+preloadImages();
+
+// Attach event listener to the gridDisplay
+gridDisplay.addEventListener('click', (event) => {
+    const clickedCard = event.target;
+    if (clickedCard.tagName === 'IMG') {
+        flipCard(clickedCard);
+    }
+});
+
+function createBoard() {
+    for (let i = 0; i < cardArray.length; i++) {
         const card = document.createElement('img');
         card.setAttribute('src', 'media/blank_bg.jpg');
         card.setAttribute('data-id', i);
@@ -82,13 +231,13 @@ function createBoard(){
     }
 }
 createBoard();
-function checkMatch(){
+function checkMatch() {
     const cards = document.querySelectorAll('#grid img');
-    if (cardsChosenIds[0]==cardsChosenIds[1]){
+    if (cardsChosenIds[0] == cardsChosenIds[1]) {
         alert("Do not click the same card again.\nReloading the page.");
         location.reload();
     }
-    if(cardsChosen[0]==cardsChosen[1]){
+    if (cardsChosen[0] == cardsChosen[1]) {
         console.log("found");
         cards[cardsChosenIds[0]].removeEventListener('click', flipCard);
         cards[cardsChosenIds[1]].removeEventListener('click', flipCard);
@@ -96,9 +245,9 @@ function checkMatch(){
         // correct_audio.play();
         document.getElementById('result_display').innerHTML = "Found a Pair!";
         document.getElementById('result_display').style.color = "yellowgreen";
-        document.getElementById('moves_count_display').innerHTML = "Pairs to be found: " + (cardArray.length/2 - cardsWon.length);
+        document.getElementById('moves_count_display').innerHTML = "Pairs to be found: " + (cardArray.length / 2 - cardsWon.length);
     }
-    else{
+    else {
         cards[cardsChosenIds[0]].setAttribute('src', 'media/blank_bg.jpg');
         cards[cardsChosenIds[1]].setAttribute('src', 'media/blank_bg.jpg');
         // incorrect_audio.play();
@@ -107,22 +256,21 @@ function checkMatch(){
     }
     cardsChosen = [];
     cardsChosenIds = [];
-    if(cardsWon.length == cardArray.length/2){
+    if (cardsWon.length == cardArray.length / 2) {
         // win_audio.play();
         document.getElementById('win_declare_display').innerHTML = "Found'em All!!";
     }
 }
 let counter = 0;
-function flipCard(){
-    let cardId = this.getAttribute('data-id');
+
+function flipCard(card) {
+    const cardId = card.getAttribute('data-id');
     cardsChosen.push(cardArray[cardId].name);
     cardsChosenIds.push(cardId);
-    console.log(cardsChosen);
-    this.setAttribute('src', cardArray[cardId].img);
-    if(cardsChosen.length === 2){
-        setTimeout(checkMatch, 500);
+    card.setAttribute('src', cardArray[cardId].img);
+    if (cardsChosen.length === 2) {
+        setTimeout(checkMatch, 300); // Reduced delay for faster response
     }
     counter++;
-    document.getElementById('moves_count_display').innerHTML = "Total Moves Made: " + Math.floor(counter/2);
+    document.getElementById('moves_count_display').textContent = "Total Moves Made: " + Math.floor(counter / 2);
 }
- 
